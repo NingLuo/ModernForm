@@ -1,6 +1,8 @@
 # ModernForm
 This is a modern form developed with HTML5, CSS3 and JavaScript
 
+References Pluralsight course: "Designing Modern Forms for the Web" by Gary Simon
+
 ## Create Account Page
 ![create_account_page](https://cloud.githubusercontent.com/assets/16660134/24053057/06181958-0b0e-11e7-8240-1bf11a2dadcf.png)
 
