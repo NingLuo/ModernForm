@@ -1,0 +1,214 @@
+/*-------------------------------------------------------
+                GLOBAL STYLES
+--------------------------------------------------------*/
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro';
+    background: url(../images/bg.png) 
+}
+
+.container {
+    width: 500px;
+    margin: 120px auto 0 auto;
+}
+
+@media screen and (max-width:40.063em) {
+    .container {
+        width: 90%;
+        margin-top: 40px;
+    }
+} /* max-width:40.063em */
+
+/*---- ERROR CLASS STYLES -----*/
+label.invalid {
+    background: #fff3c9 url(../images/alert.png) no-repeat 10px center;
+    font-size: 1.1em;
+    text-indent: 25px;
+    display: block;
+    width: 100%; /* for error label to take up te whole line when wrap */
+    padding: 10px;
+    margin: -10px auto 15px auto;
+}
+
+/*----- SHOW/HIDE STYLES -----*/
+.hide {
+    display: none;
+}
+
+/*-------------------------------------------------------
+                NAVIGATION STYLES
+--------------------------------------------------------*/
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    width: 33.33%;
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 15px;
+}
+
+ul li:before {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin: 5px auto;
+    font-size: 1.2em;
+}
+
+#step1:before { content: "1"; }
+#step2:before { content: "2"; }
+#step3:before { content: "3"; }
+
+.selected:before {
+    background: #fff;
+    color: #27333d;
+}
+
+/*-------------------------------------------------------
+                FORM STYLES
+--------------------------------------------------------*/
+.form-container {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 37px;
+}
+
+fieldset {
+    border-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    text-align: center;
+    text-transform: uppercase;
+    color: gray;
+}
+
+span.step {   
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 600;
+    display: block;
+    margin: -5px 0 25px 0;
+}
+
+label {
+    display: none;
+}
+
+.full-text {
+    width: 100%;
+    margin-bottom: 20px;   
+    font-size: 1.1em;
+    padding: 13px
+}
+
+input:focus {
+    border: 3px solid #26d293;
+}
+
+.btn {
+    width: 100%;
+    background: #26d293 url(../images/next-arrow.png) no-repeat 29% center;
+    color: #fff;
+    font-size: 1.8em;
+    border: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 15px;
+    display: block;
+    margin-top: 30px;    
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #22ba83 url(../images/next-arrow.png) no-repeat 29% center; 
+}
+
+@media screen and (max-width:40.063em) {
+    
+    .form-container {
+        padding: 10px;
+    }
+    
+    .full-text {
+        padding: 8px;
+    }
+    
+    .btn {
+        background: #26d293;
+        font-size: 1.4em;
+        padding: 8px;
+    }
+    
+    .btn:hover {
+        background: #22ba83
+    }
+} /* max-width:40.063em */
+
+/*--------------------- form step 2 --------------------*/
+
+.city-zip-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* for invalid label to wrap into next line */
+}
+
+#city { width: 62%; }
+#zip { width: 31% }
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    display: block;
+    font-size: 1.2em;
+}
+
+input[type="checkbox"] + label span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 8px;
+    background: url(../images/check_sprite.png) no-repeat top left;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background: url(../images/check_sprite.png) no-repeat top right;
+}
+
+@media screen and (max-width:40.063em) {
+    
+    .city-zip-flex {
+        flex-wrap: wrap;
+    }
+    
+    #city { width: 100%; }
+    #zip { width: 100% }
+} /* max-width:40.063em */
+
+
+
+/*--------------------- form step 3 --------------------*/
+#acount-creation-confirm label.invalid {
+    margin: 10px auto 15px auto;
+}

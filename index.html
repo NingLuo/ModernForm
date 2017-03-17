@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Modern Forms</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/foundation.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/custome.css">
+    
+    <script src="js/vendor/jquery-3.1.1.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="status">
+            <li id="step1" class="selected">Acount</li>
+            <li id="step2">Details</li>
+            <li id="step3">Confirm</li>
+        </ul>
+        
+        <div class="form-container" id="form-step-1" >
+            <form id="acount-creation" action="" name="acount-creation" autocomplete="off">
+                <fieldset>                  
+                    <legend>Step 1</legend>
+                    <span class="step">Create your account</span>
+                    
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="full-text" placeholder="Name" autofocus>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="full-text" placeholder="email">
+                    
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="full-text" placeholder="password">    
+                </fieldset>
+                
+                <input type="submit" id="step1-next" class="btn" value="Next Step">
+            </form>
+        </div>
+        
+        <div class="form-container hide" id="form-step-2">
+            <form id="acount-creation-details" action="" name="acount-creation2" autocomplete="off">
+                <fieldset>                  
+                    <legend>Step 2</legend>
+                    <span class="step">Account Details</span>
+                    
+                    <div class="city-zip-flex">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" class="full-text" placeholder="City" autofocus>
+                    
+                        <label for="zip">Zip</label>
+                        <input type="text" name="zip" id="zip" class="full-text" placeholder="Zip">
+                    </div>
+                    
+                    <label for="country">Country</label>
+                    <select id="country" name="country" class="full-text">
+                        <option>DanDong</option>
+                        <option>LiaoNing</option>
+                    </select>
+                    
+                    <input type="checkbox" name="profile" id="profile" value="1">
+                    <label for="profile"><span></span>Make my profile public</label><br>
+                    
+                    <input type="checkbox" name="emailReports" id="emailReports" value="1">
+                    <label for="emailReports"><span></span>Send me daily email reports</label>
+                </fieldset>
+                
+                <input type="submit" id="step2-next" class="btn" value="Final Step">
+                <a href="#" id="step2-previous">Previous Step</a>
+            </form>
+        </div>
+        
+        <div class="form-container hide" id="form-step-3">
+            <form id="acount-creation-confirm" action="" name="acount-creation3" autocomplete="off">
+                <fieldset>                  
+                    <legend>Step 3</legend>
+                    <span class="step">Terms of Service</span>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    
+                    <input type="checkbox" name="terms" id="terms" value="1">
+                    <label for="terms" id="terms-label"><span></span>I accept these terms</label>
+                    
+                </fieldset>
+                
+                <input type="submit" id="step3-next" class="btn" value="Finish up">
+                <a href="#" id="step3-previous">Previous Step</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
